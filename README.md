@@ -1,4 +1,4 @@
-# Ranzo Site Copier
+# Copy the Page
 
 CSS、画像、フォント、script参照をローカルに保存して、静的に開けるサイトコピーを作るツールです。
 
@@ -23,7 +23,7 @@ npm run copy -- https://example.com --output copies/example-com --depth 1 --max-
 - CSS内の `url()` と `@import` をCSSファイル基準で再解決して保存
 - `srcset` と `data-src` などのlazy画像属性を保存
 - 取得できない画像はSVG placeholderを生成
-- `ranzo-manifest.json` にページ、アセット、欠損、生成物を記録
+- `copy-the-page-manifest.json` にページ、アセット、欠損、生成物を記録
 
 ## Options
 

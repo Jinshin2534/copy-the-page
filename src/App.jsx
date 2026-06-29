@@ -51,7 +51,7 @@ const repairRules = [
 const outputFiles = [
   { icon: FileText, label: "index.html", type: "rewritten HTML" },
   { icon: Archive, label: "assets/", type: "CSS, images, fonts, scripts" },
-  { icon: FileJson, label: "ranzo-manifest.json", type: "download result log" },
+  { icon: FileJson, label: "copy-the-page-manifest.json", type: "download result log" },
   { icon: FileText, label: "README.md", type: "local entry guide" },
 ];
 
@@ -112,8 +112,8 @@ function App() {
             <FolderDown size={20} aria-hidden="true" />
           </span>
           <span>
-            <strong>Ranzo</strong>
-            <small>complete site copier</small>
+            <strong>Copy the Page</strong>
+            <small>static page copier</small>
           </span>
         </a>
         <nav aria-label="Primary">

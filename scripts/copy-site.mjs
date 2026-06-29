@@ -13,7 +13,7 @@ const DEFAULTS = {
   includeExternalPages: false,
   clean: false,
   userAgent:
-    "RanzoSiteCopier/0.1 (+https://github.com/local/ranzo; complete static copy)",
+    "CopyThePage/0.1 (+https://github.com/local/copy-the-page; complete static copy)",
 };
 
 const CONTENT_TYPE_EXTENSIONS = [
@@ -883,7 +883,7 @@ class SiteCopier {
   }
 
   async writeManifest() {
-    const manifestPath = path.join(this.outputDir, "ranzo-manifest.json");
+    const manifestPath = path.join(this.outputDir, "copy-the-page-manifest.json");
     await writeFile(manifestPath, `${JSON.stringify(this.manifest, null, 2)}\n`, "utf8");
   }
 
@@ -891,11 +891,11 @@ class SiteCopier {
     const readmePath = path.join(this.outputDir, "README.md");
     const page = this.pages.get(normalizeFetchUrl(this.startUrl));
     const entry = page ? path.relative(this.outputDir, page.localPath) : "index.html";
-    const body = `# Ranzo site copy
+    const body = `# Copy the Page site copy
 
 Source: ${this.startUrl}
 Entry: ${entry}
-Manifest: ranzo-manifest.json
+Manifest: copy-the-page-manifest.json
 
 Open the entry file in a browser, or serve this directory with a static server.
 `;
